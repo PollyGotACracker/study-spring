@@ -26,7 +26,7 @@ public class UserController {
 		 * 사용해야 한다.
 		 */
 		System.out.println(user.getUsername());
-		// model 의 USER 속성과 UserVO(user) 데이터를 키-값 쌍으로 만들어 client 로 보낸다.
+		// model class 의 USER 속성과 UserVO(user) 데이터를 키-값 쌍으로 만들어 client 로 보낸다.
 		model.addAttribute("USER",user);
 		return "user/join_ok";
 	}
@@ -38,7 +38,7 @@ public class UserController {
 		 * 어떤 일을 수행하려면 클래스를 객체로 선언(인스턴스 생성)하고, 
 		 * 초기화하는 과정을 먼저 수행해야 한다.
 		 */
-		// UserService.getUser() 처럼 사용 불가
+		// UserService.getUser() 바로 사용 불가
 		UserService userService = new UserService();
 		UserVO user = userService.getUser();
 		model.addAttribute("USER", user);

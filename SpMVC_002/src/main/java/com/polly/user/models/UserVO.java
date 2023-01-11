@@ -58,7 +58,7 @@ public class UserVO {
 		 * Boolean : 불린형
 		 */
 	
-	// 마우스 우클릭 > Source > Generate Getter and Setter...
+	// 마우스 우클릭 > Source > Generate Getters and Setters...
 	public String getUsername() {
 		return username;
 	}
