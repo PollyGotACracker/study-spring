@@ -17,7 +17,7 @@ public class ExecV1 {
 	 * 독립적으로 코드를 실행할 클래스에는 
 	 * 반드시 main() method 가 있어야 한다
 	 * main() method 의 코드 형식은 정해져 있다
-	 * 이 main() method java 에서는 시작점 method 라고 한다
+	 * 이 main() method 를 java 에서는 시작점 method 라고 한다
 	 */
 	public static void main(String[] args) {
 		int num1 = 10;
