@@ -20,9 +20,11 @@ public class ArrayV6 {
 			// nations[index1], nations[index2] 두 요소의 값을 서로 교환
 			
 			// 임시 저장
+			if (index1 != index2) {
 			String _n = nations[index1];
 			nations[index1] = nations[index2];
-			nations[2] = _n;		
+			nations[index2] = _n;		
+			}
 		}
 		System.out.println();
 		for (String n : nations) {

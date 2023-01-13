@@ -21,6 +21,7 @@ public class ArrayV7 {
 			int rndNum1 = (int)(Math.random() * nums.length);
 			int rndNum2 = (int)(Math.random() * nums.length);
 			
+			// index 가 같을 경우 XOR swap 시 0 이 나타나게 됨
 			if (rndNum1 != rndNum2) {
 				nums[rndNum1] = nums[rndNum1] + nums[rndNum2];
 				nums[rndNum2] = nums[rndNum1] - nums[rndNum2];
