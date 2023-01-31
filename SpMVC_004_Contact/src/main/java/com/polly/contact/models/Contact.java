@@ -32,13 +32,6 @@ public class Contact {
 	private String c_email;
 	private int c_age;
 	
-	/**
-	 * 3개의 파라미터(전달값)를 주입하면서 
-	 * 객체를 초기화 하기 위한 생성자
-	 * 
-	 * 
-	 * 
-	 */
 	// 마우스 우클릭 -> source -> Generate Constructor using fields...
 	// 임의 생성자(매개변수 O)
 	public Contact(String c_id, String c_name, String c_email, int c_age) {
@@ -52,6 +45,11 @@ public class Contact {
 		this.c_age = c_age;
 		this.c_email = c_email;
 	}
+	
+	/**
+	 * 3개의 파라미터(전달값)를 주입하면서 
+	 * 객체를 초기화 하기 위한 생성자 
+	 */
 	
 	public Contact(String c_id, String c_name, int c_age) {
 		super();

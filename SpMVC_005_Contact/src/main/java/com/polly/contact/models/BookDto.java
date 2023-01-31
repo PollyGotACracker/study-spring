@@ -1,6 +1,16 @@
 package com.polly.contact.models;
 
-public class Book {
+/**
+ * BookDto
+ * 
+ * DTO(Data Transfer Object)
+ * 	데이터를 담아서 여기저기로 옮기는 바구니 역할을 하는 객체
+ * 
+ * VO(Value Object)
+ *	데이터를 담는 객체 
+ */
+
+public class BookDto {
 	private String title;
 	private String link;
 	private String image;
@@ -13,7 +23,7 @@ public class Book {
 	private int price;
 	
 	
-	public Book(String title, String link, String image, String author, int discount, String publisher, String isbn,
+	public BookDto(String title, String link, String image, String author, int discount, String publisher, String isbn,
 			String description, String pubdate, int price) {
 		super();
 		this.title = title;
@@ -28,15 +38,12 @@ public class Book {
 		this.price = price;
 	}
 	
-	
-	
-	public Book() {
+	public BookDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-
-
+	
 	public String getTitle() {
 		return title;
 	}
@@ -104,5 +111,4 @@ public class Book {
 				+ discount + ", publisher=" + publisher + ", isbn=" + isbn + ", description=" + description
 				+ ", pubdate=" + pubdate + ", price=" + price + "]";
 	}
-	
 }

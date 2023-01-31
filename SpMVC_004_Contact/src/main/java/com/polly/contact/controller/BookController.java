@@ -16,7 +16,7 @@ public class BookController {
 	@Autowired
 	private BookDao bookDao;
 	
-	@RequestMapping(value= {"/", ""})
+	@RequestMapping(value= {"/", ""}, produces="application/json;charset=UTF-8")
 	public List<Book> list() {
 		return bookDao.selectAll();
 	}

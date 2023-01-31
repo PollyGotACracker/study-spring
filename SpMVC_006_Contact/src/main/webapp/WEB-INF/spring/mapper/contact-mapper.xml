@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.polly.contact.persistence.ContactDao">
+	<select id="selectAll" resultType="ContactDto">
+		SELECT * FROM tbl_contact
+	</select>
+	
+	<insert id="insert" parameterType="ContactDto">
+		INSERT INTO tbl_contact(
+			uid,
+			name,
+			tel,
+			addr,
+			hobby
+		) VALUES (
+			#{uid},
+			#{name},
+			#{tel},
+			#{addr},
+			#{hobby}
+		)
+	</insert>
+	
+	<update id="update" parameterType="ContactDto">
+		UPDATE tbl_contact SET
+			uid	= #{uid},
+			name = #{name},
+			tel	= #{tel},
+			addr = #{addr},
+			hobby = #{hobby}
+			WHERE uid = #{uid}
+	</update>
+
+</mapper> 
