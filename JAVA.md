@@ -34,3 +34,35 @@
 ## Object Class
 
 - 참조형 변수(class) 들은 기본적으로 Object class 를 상속한다.
+
+## 3 Tier(3계층 구조)
+
+- Client Tier: Presentation Logic : Controller class
+- Application Tier : Business(Transaction) Logic : Service class
+- Data Tier : Data Access Logic : Data class
+
+## Lombok.jar plugin 설치
+
+- 실행이 되지 않을 경우 Terminal 또는 Bash 에서
+
+```
+java -jar lombok.jar
+```
+
+- install 시 STS exe 와 같은 경로의 폴더 선택
+- STS.ini 에 경로 추가 확인
+
+```
+-javaagent:C:\...\sts-bundle\sts-3.9.18.RELEASE\lombok.jar
+```
+
+- https://mvnrepository.com/artifact/org.projectlombok/lombok 의 dependency 추가
+- Dto 파일에 아래 Annotation 추가 후, directory 의 Dto 파일을 확장해서 method 확인
+
+```
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+```

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SAX Parse Error : xml 파일 첫 번째 줄에 빈 칸이 있거나, 파일 내용이 없음 -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- Dao 파일과 연결 -->
+<mapper namespace="com.polly.contact.persistence.HobbyDao">
+	<select id="selectAll"></select>
+	<select id="select"></select>
+	<insert id="insert"></insert>
+	<update id="update"></update>
+	<delete id="delete"></delete>
+</mapper> 

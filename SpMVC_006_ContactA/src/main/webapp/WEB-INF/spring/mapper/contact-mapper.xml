@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SAX Parse Error : xml 파일 첫 번째 줄에 빈 칸이 있거나, 파일 내용이 없음  -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- Dao 파일과 연결 -->
+<mapper namespace="com.polly.contact.persistence.ContactDao">
+	<select id="selectAll" resultType="ContactDto">
+		SELECT * FROM tbl_contacts
+	</select>
+	
+	<insert id="insert" parameterType="ContactDto">
+		INSERT INTO tbl_contacts(
+			c_uid,
+			c_name,
+			c_email,
+			c_tel,
+			c_addr,
+			c_hobby
+		) VALUES (
+			#{c_uid},
+			#{c_name},
+			#{c_email},
+			#{c_tel},
+			#{c_addr},
+			#{c_hobby}
+		)
+	</insert>
+	
+	<update id="update" parameterType="ContactDto">
+		UPDATE tbl_contacts SET
+			c_uid	= #{c_uid},
+			c_name = #{c_name},
+			c_email = #{c_email},
+			c_tel	= #{c_tel},
+			c_addr = #{c_addr},
+			c_hobby = #{c_hobby}
+			WHERE c_uid = #{c_uid}
+	</update>
+
+	<!-- 세미콜론 제거 -->	
+	<select id="create_contacts_table">
+		CREATE TABLE IF NOT EXISTS tbl_contacts(
+			c_uid	BIGINT	AUTO_INCREMENT	PRIMARY KEY,
+			c_name	VARCHAR(20)	NOT NULL,
+			c_email VARCHAR(125),
+			c_tel	VARCHAR(15),	
+			c_addr	VARCHAR(125),
+			c_hobby	VARCHAR(20)		
+		)
+	</select>
+	<select id="create_hobbies_table">
+		CREATE TABLE IF NOT EXISTS tbl_hobbies (
+			h_uid	BIGINT	AUTO_INCREMENT	PRIMARY KEY,
+			h_cuid	BIGINT	NOT NULL,
+			h_name	VARCHAR(15)	NOT NULL	
+		)
+	</select>
+</mapper> 
