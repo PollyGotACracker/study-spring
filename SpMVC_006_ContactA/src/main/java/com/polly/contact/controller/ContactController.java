@@ -33,5 +33,4 @@ public class ContactController {
 	public ContactDto detail(String uid) {
 		return cntService.findById(Long.valueOf(uid) - 1);
 	}
-	
 }

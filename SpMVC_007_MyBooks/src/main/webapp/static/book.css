@@ -1,0 +1,17 @@
+h1 {
+	width: 80%;
+	margin: 10px auto;
+	text-align: center;
+}
+
+table {
+	width: 80%;
+	margin: 10px auto;
+	border-collapse: collapse;
+}
+
+table td, table th {
+	text-align: left;
+	padding: 12px 5px 12px 10px;
+	border-bottom: 1px solid #ddd;
+}

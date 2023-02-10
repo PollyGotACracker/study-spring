@@ -35,7 +35,7 @@
 			c_tel	= #{c_tel},
 			c_addr = #{c_addr},
 			c_hobby = #{c_hobby}
-			WHERE c_uid = #{c_uid}
+		WHERE c_uid = #{c_uid}
 	</update>
 
 	<!-- 세미콜론 제거 -->	

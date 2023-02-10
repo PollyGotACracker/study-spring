@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SAX Parse Error : xml 파일 첫 번째 줄에 빈 칸이 있거나, 파일 내용이 없음 -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- Dao 파일과 연결 -->
+<mapper namespace="com.polly.books.persistence.BookDao">
+	
+	<insert id="insert" parameterType="BookDto">
+		INSERT INTO tbl_books(
+			title,
+			link,	
+			image,	
+			author,	
+			discount,	
+			publisher,	
+			isbn,
+			description,	
+			pubdate
+		) VALUES (
+			#{title},
+			#{link},
+			#{image},	
+			#{author},	
+			#{discount},	
+			#{publisher},	
+			#{isbn},
+			#{description},	
+			#{pubdate}
+		)
+	</insert>
+	
+	<update id="update" parameterType="BookDto">
+		UPDATE tbl_books SET
+			title = #{title},
+			link = #{link},
+			image = #{image},	
+			author = #{author},	
+			discount = #{discount},	
+			publisher = #{publisher},	
+			isbn = #{isbn},
+			description = #{description},	
+			pubdate = #{pubdate}
+		WHERE isbn = #{isbn}
+	</update>
+	
+	<select id="create_books_table">
+		CREATE TABLE IF NOT EXISTS tbl_books (
+			title	varchar(125),	
+			link	varchar(225),	
+			image	varchar(255),	
+			author	varchar(125),	
+			discount	int,
+			publisher	varchar(125),	
+			isbn	varchar(13)	 PRIMARY KEY,
+			description	text,
+			pubdate	varchar(20),	
+			price	int
+		)
+	</select>
+</mapper> 
